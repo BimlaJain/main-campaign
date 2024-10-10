@@ -3,9 +3,9 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="shortcut icon" href="assets/img/png/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="assets/img/webp/favicon.webp" type="image/x-icon">
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
             integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
@@ -13,25 +13,26 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
             integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
-            <!-- Primary Meta Tags -->
-            <title>Campaign page</title>
-            <meta name="title" content="Campaign page" />
-            <meta name="description" content=" The Most Powerful Offline Lead Conversion Data for your Businesses" />
-            
-            <!-- Open Graph / Facebook -->
-            <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://main-campaign-pink.vercel.app/" />
-            <meta property="og:title" content="Campaign page" />
-            <meta property="og:description" content=" The Most Powerful Offline Lead Conversion Data for your Businesses" />
-            <meta property="og:image" content="/meta-img.png" />
-            
-            <!-- Twitter -->
-            <meta property="twitter:card" content="summary_large_image" />
-            <meta property="twitter:url" content="https://main-campaign-pink.vercel.app/" />
-            <meta property="twitter:title" content="Campaign page" />
-            <meta property="twitter:description" content=" The Most Powerful Offline Lead Conversion Data for your Businesses" />
-            <meta property="twitter:image" content="/meta-img.png" />
-            <!-- Meta Tags Generated with https://metatags.io -->
+        <!-- Primary Meta Tags -->
+        <title>Campaign page</title>
+        <meta name="title" content="Campaign page" />
+        <meta name="description" content=" The Most Powerful Offline Lead Conversion Data for your Businesses" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://main-campaign-pink.vercel.app/" />
+        <meta property="og:title" content="Campaign page" />
+        <meta property="og:description" content=" The Most Powerful Offline Lead Conversion Data for your Businesses" />
+        <meta property="og:image" content="/meta-img.png" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://main-campaign-pink.vercel.app/" />
+        <meta property="twitter:title" content="Campaign page" />
+        <meta property="twitter:description"
+            content=" The Most Powerful Offline Lead Conversion Data for your Businesses" />
+        <meta property="twitter:image" content="/meta-img.png" />
+        <!-- Meta Tags Generated with https://metatags.io -->
         <script>
             tailwind.config = {
                 theme: {
@@ -53,6 +54,30 @@
 
         </script>
         <style>
+            @font-face {
+                font-family: "thicccboi";
+                src: url("../fonts/THICCCBOI-Bold.ttf");
+            }
+
+            @font-face {
+                font-family: "thicccboi";
+                src: url("../fonts/THICCCBOI-Medium.ttf");
+            }
+
+            @font-face {
+                font-family: "thicccboi";
+                src: url("../fonts/THICCCBOI-Regular.ttf");
+            }
+
+            @font-face {
+                font-family: "thicccboi";
+                src: url("../fonts/THICCCBOI-SemiBold.ttf");
+            }
+
+            .body {
+                font-family: "thicccboi";
+            }
+
             .text-darkblue {
                 color: #3B5998;
             }
@@ -71,12 +96,6 @@
 
             .body {
                 font-family: "thicccboi";
-            }
-
-            .nav-tabs {
-                display: flex;
-                cursor: pointer;
-                margin-bottom: 20px;
             }
 
             .tab.active {
@@ -219,17 +238,20 @@
             .top-btn.active {
                 visibility: visible;
             }
+            .slick-track{
+                padding-bottom: 40px !important;
+            }
         </style>
     </head>
 
     <body>
         <!-- --------------------hero-section------------------------------------- -->
         <section class="relative lg:pt-20 md:pt-14 sm:pt-10 pt-9 max-w-[1920px] mx-auto px-3 overflow-hidden pb-7">
-            <img src="assets/img/png/hero-layer.png" alt="hero-layer"
+            <img src="assets/img/webp/hero-layer.webp" alt="hero-layer"
                 class="absolute top-0 right-0 -z-10 2xl:max-w-[1440px] xl:max-w-[1065px] lg:max-w-[730px] md:max-w-[580px] sm:max-w-[400px] sm:block hidden">
             <div class="container">
                 <div class="flex justify-between">
-                    <a href=""><img src="assets/img/png/logo.png" alt="logo"
+                    <a href=""><img src="assets/img/webp/logo.webp" alt="logo"
                             class="sm:max-w-[200px] sm:h-7 h-4 max-w-[120px]"></a>
                     <div class="sm:flex sm:gap-12 gap-5">
                         <a href="" class="font-semibold sm:text-sm text-xs leading-normal text-black">Login or
@@ -240,7 +262,7 @@
                     </div>
                 </div>
                 <h1
-                    class="font-bold xl:text-[80px] lg:text-7xl md:text-6xl sm:text-5xl text-[28px] text-black md:pt-[73px] sm:pt-14 pt-10 max-w-[1317px] mx-auto text-center leading-[118%]">
+                    class="font-bold xl:text-[80px] lg:text-7xl md:text-6xl sm:text-5xl text-[28px] text-black md:pt-[73px] sm:pt-14 pt-10 max-w-[1317px] mx-auto text-center leading-[120%]">
                     The Most Powerful Offline Lead Conversion Data for your <span
                         class="lg:text-white text-gray-400">Business.</span></h1>
                 <p
@@ -249,11 +271,11 @@
                 <input type="email" placeholder="Enter you work email"
                     class="font-medium sm:text-lg text-sm rounded-full md:py-5 sm:py-3 py-2 flex lg:w-[570px] md:w-[450px] sm:w-[350px] w-[290px] mx-auto pl-4 focus:outline-none xl:border-none border-gray-400 border-2">
                 <div class="relative lg:mt-28 md:mt-16 sm:mt-12 mt-8 xl:left-[9%] 2xl:left-0">
-                    <img src="assets/img/png/hero-graph1.png" alt="graph"
+                    <img src="assets/img/webp/hero-graph1.webp" alt="graph"
                         class="2xl:max-w-[963px] xl:max-w-[750px] lg:max-w-[550px] md:max-w-[450px] sm:max-w-[350px] max-w-[245px] w-full">
                     <div class="absolute top-[27%] 2xl:left-[37%] left-[28%] ">
-                        <img src="assets/img/png/hero-graph2.png" alt="graph"
-                            class="2xl:max-w-[963px] xl:max-w-[750px] lg:max-w-[550px] md:max-w-[450px] sm:max-w-[350px] max-w-[245px] w-full">
+                        <img src="assets/img/webp/hero-graph2.webp" alt="graph"
+                            class="2xl:max-w-[1005px] xl:max-w-[750px] lg:max-w-[550px] md:max-w-[450px] sm:max-w-[350px] max-w-[245px] w-full">
                     </div>
                 </div>
             </div>
@@ -263,16 +285,16 @@
         <section class="xl:pt-28 lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
             <div class="container">
                 <h2
-                    class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center max-w-[1010px] mx-auto">
+                    class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold leading-[120%] text-black text-center max-w-[1010px] mx-auto">
                     See your revenue grow in<br>
                     real time with our dashboards.</h2>
                 <div class="tab-card relative">
-                    <img src="assets/img/png/arrow-left.png" alt="left-arrow"
+                    <img src="assets/img/webp/arrow-left.webp" alt="left-arrow"
                         class="absolute w-[85px] 2xl:bottom-[-8%] bottom-[-6%] left-[4%] md:block hidden">
-                    <img src="assets/img/png/arrow-right.png" alt="arrow-right"
+                    <img src="assets/img/webp/arrow-right.webp" alt="arrow-right"
                         class="absolute max-w-[85px] xl:top-[14%] lg:top-[19%] top-[16%] right-[3%] md:block hidden">
                     <div
-                        class="nav-tabs gap-4 flex flex-wrap justify-center max-w-[1134px] mx-auto md:py-8 sm:py-6 py-5">
+                        class="nav-tabs gap-4 flex flex-wrap justify-center max-w-[1134px] mx-auto md:py-8 sm:py-6 py-5 cursor-pointer">
                         <div class="tab sm:py-5 sm:px-8 py-3 px-5 border-2 border-[gray-400] rounded-full text-gray-400 bg-gray-100 font-medium text-xl leading-none whitespace-nowrap"
                             data-target="tab1">CRM Integrations</div>
                         <div class="tab sm:py-5 sm:px-8 py-3 px-5 border-2 border-[gray-400] rounded-full text-gray-400 bg-gray-100 font-medium text-xl leading-none whitespace-nowrap"
@@ -345,13 +367,7 @@
                                         </defs>
                                     </svg>
                                 </span>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat. Duis
-                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla
-                                pariatur.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                             </div>
                             <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
                                 <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
@@ -368,9 +384,8 @@
                                         </defs>
                                     </svg>
                                 </span>
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                fugiat
-                                nulla pariatur.
+                            Ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                            ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                             </div>
                             <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm">
                                 <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
@@ -387,13 +402,7 @@
                                         </defs>
                                     </svg>
                                 </span>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat. Duis
-                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla
-                                pariatur.
+                                Euis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                             </div>
                         </div>
                         <div id="tab2" class="content">
@@ -740,19 +749,19 @@
             </div>
         </section>
 
-        <!--------------------------- marketing classes------------------------------ -->
+        <!--------------------------- marketing classes-------------------------------->
         <section class="xl:pt-28 lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
             <div class="container">
                 <h2
-                    class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center max-w-[790px] mx-auto">
+                    class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center max-w-[790px] mx-auto leading-[120%]">
                     Marketing analytics that REALLY matter</h2>
-                <div class="lg:pb-14 md:pb-11 sm:pb-9 pb-1 max-w-[1027px] mx-auto pt-5">
-                    <img src="assets/img/png/marketing-graph.png" alt="marketing-graph">
+                <div class="max-w-[1027px] mx-auto pt-5">
+                    <img src="assets/img/webp/marketing-graph.webp" alt="marketing-graph">
                 </div>
-                <div class="tab-card md:py-8 sm:py-6 py-5 relative">
-                    <img src="assets/img/png/down-arrow.png" alt="down-arrow"
-                        class="absolute max-w-[85px] right-[22%] bottom-[-2%] md:block hidden">
-                    <div class="nav-tabs gap-4 flex flex-wrap justify-center max-w-[1034px] mx-auto">
+                <div class="tab-card relative">
+                    <img src="assets/img/webp/down-arrow.webp" alt="down-arrow"
+                        class="absolute max-w-[85px] right-[22%] bottom-[-12%] md:block hidden">
+                    <div class="nav-tabs gap-4 flex flex-wrap justify-center max-w-[1034px] mx-auto cursor-pointer lg:pb-9 md:pb-7 sm:pb-6 pb-5">
                         <div class="tab sm:py-5 sm:px-8 py-3 px-4 border-2 border-[gray-400] rounded-full text-gray-400 bg-gray-100 font-medium text-xl leading-none whitespace-nowrap"
                             data-target="tab5">Spending</div>
                         <div class="tab sm:py-5 sm:px-8 py-3 px-4 border-2 border-[gray-400] rounded-full text-gray-400 bg-gray-100 font-medium text-xl leading-none whitespace-nowrap"
@@ -767,7 +776,7 @@
                     </div>
 
                     <div
-                        class="tab-content shadow-[0px_14px_30.5px_0px#00000026] lg:py-14 md:py-12 sm:py-8 py-6 lg:px-10 md:px-9 sm:px-8 px-6 md:rounded-[48px] sm:rounded-3xl rounded-2xl max-w-[1123px] mx-auto custom-box">
+                        class="tab-content shadow-[0px_14px_30.5px_0px#00000026] lg:py-10 sm:py-8 py-6 lg:px-10 md:px-9 sm:px-8 px-6 md:rounded-[48px] sm:rounded-3xl rounded-2xl max-w-[1123px] mx-auto custom-box">
                         <div id="tab5" class="content active">
                             <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
                                 <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
@@ -1233,11 +1242,11 @@
             <div class="container">
                 <h2
                     class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center xl:pb-[76px] lg:pb-[144px] md:pb-12 sm:pb-10 pb-5 max-w-[991px] mx-auto text-center">
-                Understand are driven from your campaigns <span class="text-darkblue">how many sales</span></h2>
+                    Understand are driven from your campaigns <span class="text-darkblue">how many sales</span></h2>
                 <div class="lg:flex flex-wrap">
                     <div class="lg:w-6/12">
                         <p
-                            class="font-medium md:text-xl sm:text-lg text-sm leading-[140%] text-black xl:pt-[90px] lg:text-left text-center">
+                            class="font-medium md:text-xl sm:text-lg text-sm leading-[140%] text-black xl:pt-[90px] lg:text-left text-center max-w-[635px]">
                             The issue with tracking
                             marketing data in
                             an online
@@ -1247,7 +1256,7 @@
                             doin the
                             job, and which
                             ones aren’t...until now.</p>
-                        <p class="font-medium md:text-xl sm:text-lg text-sm leading-[140%] text-black sm:pt-5 pt-2">With
+                        <p class="font-medium md:text-xl sm:text-lg text-sm leading-[140%] text-black sm:pt-5 pt-2 max-w-[600px]">With
                             Main Campaign, you can
                             integrate your
                             conversion data with Facebook conversion API and Offline Conversion Tracking
@@ -1265,7 +1274,7 @@
                     </div>
                     <div class="lg:w-6/12">
                         <div>
-                            <img src="assets/img/png/facebook-user.png" alt="facebook-user'">
+                            <img src="assets/img/webp/facebook-user.webp" alt="facebook-user'">
                         </div>
                     </div>
                 </div>
@@ -1336,10 +1345,10 @@
         <section id="business" class="xl:pt-[149px] lg:pt-24 md:pt-16 sm:pt-12 pt-10 overflow-hidden">
             <div class="container">
                 <h2
-                    class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center xl:pb-[76px] lg:pb-16 md:pb-12 sm:pb-10 pb-7 max-w-[896px] mx-auto">
+                    class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center xl:pb-[76px] lg:pb-16 md:pb-12 sm:pb-10 pb-7 max-w-[896px] mx-auto leading-[120%]">
                     Businesses generate more revenue with Main Campaign</h2>
                 <div
-                    class="flex justify-center gap-12 xl:pt-[76px] lg:pt-16 pt-2 slider lg:pb-14 md:pb-10 sm:pb-8 pb-6 ">
+                    class="flex justify-center gap-12 slider  ">
                     <div
                         class="slider-width bg-white relative shadow-[0px_14px_30.5px_0px#00000026] md:rounded-[48px] rounded-3xl custom-blueline pl-6 lg:ml-12 md:ml-10 sm:ml-8 ml-6">
                         <div
@@ -1450,14 +1459,14 @@
         </section>
 
         <!------------------------------- scale section -------------------------------->
-        <section class="xl:pb-[90px] lg:pb-24 md:pb-16 sm:pb-12 pb-10 px-3 relative">
+        <section class="xl:pt-[90px] lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3 relative">
             <div class="absolute -z-10 left-0 lg:bottom-[-32%] md:bottom-[-21%]">
-                <img src="assets/img/png/bottom-layer.png" alt="bottom-layer"
+                <img src="assets/img/webp/bottom-layer.webp" alt="bottom-layer"
                     class="lg:max-w-[686px] md:max-w-[400px] md:block hidden">
             </div>
             <div class="container">
                 <h2
-                    class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center sm:pb-[30px] pb-5">
+                    class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center sm:pb-[35px] pb-5">
                     Are you ready to scale?</h2>
                 <div class="flex justify-center">
                     <button
@@ -1465,7 +1474,7 @@
                         Start My Free Trial</button>
                 </div>
                 <div class="flex md:pt-9 sm:pt-7 pt-5">
-                    <img src="assets/img/png/scale.png" alt="scale" class="max-w-[1218px] mx-auto w-full">
+                    <img src="assets/img/webp/scale.webp" alt="scale" class="max-w-[1218px] mx-auto w-full">
                 </div>
             </div>
         </section>
@@ -1527,7 +1536,7 @@
                 <div
                     class="flex xl:pt-16 lg:pt-12 md:pt-8 sm:pt-6 pt-4 justify-between pb-16 max-w-[1600px] mx-auto flex-wrap max-lg:justify-center max-lg:items-center px-3">
                     <div class="w-4/12 max-lg:w-full flex max-lg:justify-center max-lg:items-center max-lg:mb-5">
-                        <img src="assets/img/png/logo.png" alt="footerlogo"
+                        <img src="assets/img/webp/logo.webp" alt="footerlogo"
                             class="lg:max-w-[200px] max-w-[300px] lg:h-[40px] h-[53px]">
                     </div>
                     <div class="w-2/12 max-lg:w-6/12 flex-col flex max-lg:items-center gap-6 max-md:gap-3 max-lg:pt-16">

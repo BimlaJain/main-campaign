@@ -27,7 +27,7 @@ $('.slider').slick({
     dots: true,
     infinite: true,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: 3.04,
     slidesToScroll: 1,
     responsive: [
         {
