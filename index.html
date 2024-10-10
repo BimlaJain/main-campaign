@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Campaign page</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="shortcut icon" href="assets/img/png/favicon.png" type="image/x-icon">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+            integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+            integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script>
+            tailwind.config = {
+                theme: {
+                    container: {
+                        center: true,
+                        screens: {
+                            sm: '600px',
+                            md: '724px',
+                            lg: '984px',
+                            xl: '1140',
+                            '2xl': '1440px',
+
+                        },
+                    },
+
+                }
+
+            }
+
+        </script>
+        <style>
+            .text-darkblue {
+                color: #3B5998;
+            }
+
+            .footer-bg {
+                background-color: #FAF9F6;
+            }
+
+            .bg-darkblue {
+                background-color: #3B5998;
+            }
+
+            .text-lightblue {
+                color: #7D889E;
+            }
+
+            .body {
+                font-family: "thicccboi";
+            }
+
+            .nav-tabs {
+                display: flex;
+                cursor: pointer;
+                margin-bottom: 20px;
+            }
+
+            .tab.active {
+                background-color: #3B5998;
+                font-weight: bold;
+                border: 2px solid #3B5998;
+                color: white;
+            }
+
+            .tab-content .content {
+                display: none;
+            }
+
+            .tab-content .content.active {
+                display: block;
+            }
+
+            .custom-box {
+                border-radius: 48px !important;
+                padding: 20px;
+                background-color: white;
+                position: relative;
+            }
+
+            .custom-box:before {
+                content: "";
+                position: absolute;
+                top: -8px;
+                left: -1px;
+                right: -1px;
+                height: 50px;
+                z-index: -10 !important;
+                border-radius: 50px 50px 0 0 !important;
+                background: linear-gradient(259.08deg, #50EDFF -5.05%, #48B8DA 63.97%, #3B5998 130.42%);
+            }
+
+            .custom-card {
+                border-radius: 24px !important;
+                padding: 20px;
+                background-color: white;
+                position: relative;
+            }
+
+            .custom-card:before {
+                content: "";
+                position: absolute;
+                top: -4px;
+                left: -1px;
+                right: -1px;
+                height: 50px;
+                z-index: -10 !important;
+                border-radius: 24px 24px 0 0 !important;
+                background: linear-gradient(259.08deg, #50EDFF -5.05%, #48B8DA 63.97%, #3B5998 130.42%);
+            }
+
+            .custom-card1 {
+                border-radius: 24px !important;
+                padding: 20px;
+                background-color: white;
+                position: relative;
+            }
+
+            .custom-card1:after {
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                left: -1px;
+                right: -1px;
+                height: 50px;
+                z-index: -10 !important;
+                border-radius: 0px 0px 24px 24px !important;
+                background: linear-gradient(259.08deg, #50EDFF -5.05%, #48B8DA 63.97%, #3B5998 130.42%);
+            }
+
+            .custom-blueline {
+                border-radius: 48px !important;
+                padding: 20px;
+                background-color: white;
+                position: relative;
+            }
+
+            .custom-blueline::before {
+                content: "";
+                position: absolute;
+                top: -8px;
+                left: -1px;
+                right: -1px;
+                height: 50px;
+                z-index: -10 !important;
+                border-radius: 48px 48px 0px 0px !important;
+                background-color: #3B5998;
+            }
+
+            .slick-dots li.slick-active button:before {
+                color: #3B5998 !important;
+                opacity: .75;
+                font-size: 10px;
+            }
+
+            .slick-dots li button:before {
+                color: black;
+                opacity: .25;
+                font-size: 10px;
+            }
+
+            .slick-list {
+                position: relative;
+                display: block;
+                overflow: hidden;
+                padding-top: 100px !important;
+            }
+
+            #business .slider-width {
+                max-width: 446px !important;
+            }
+
+            #business .slick-next {
+                display: none !important;
+            }
+
+            #business .slick-prev {
+                display: none !important;
+            }
+
+            #footer .slick-dots {
+                display: none !important;
+            }
+
+            #footer .slick-list {
+                padding-top: 0 !important;
+            }
+
+            .top-btn {
+                visibility: hidden;
+                padding: 10px;
+                z-index: 15;
+                transition: .3s;
+            }
+
+            .top-btn.active {
+                visibility: visible;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- --------------------hero-section------------------------------------- -->
+        <section class="relative lg:pt-20 md:pt-14 sm:pt-10 pt-9 max-w-[1920px] mx-auto px-3 overflow-hidden pb-7">
+            <img src="assets/img/png/hero-layer.png" alt="hero-layer"
+                class="absolute top-0 right-0 -z-10 2xl:max-w-[1440px] xl:max-w-[1065px] lg:max-w-[730px] md:max-w-[580px] sm:max-w-[400px] sm:block hidden">
+            <div class="container">
+                <div class="flex justify-between">
+                    <a href=""><img src="assets/img/png/logo.png" alt="logo"
+                            class="sm:max-w-[200px] sm:h-7 h-4 max-w-[120px]"></a>
+                    <div class="sm:flex sm:gap-12 gap-5">
+                        <a href="" class="font-semibold sm:text-sm text-xs leading-normal text-black">Login or
+                            Register</a>
+                        <a href=""
+                            class="font-semibold sm:text-sm text-xs leading-normal py-2 px-5 rounded-full bg-darkblue text-white hover:scale-110 transition-all duration-300 sm:-mt-3 mt-3 flex items-center justify-center">Start
+                            Free Trial</a>
+                    </div>
+                </div>
+                <h1
+                    class="font-bold xl:text-[80px] lg:text-7xl md:text-6xl sm:text-5xl text-[28px] text-black md:pt-[73px] sm:pt-14 pt-10 max-w-[1317px] mx-auto text-center leading-[118%]">
+                    The Most Powerful Offline Lead Conversion Data for your <span
+                        class="lg:text-white text-gray-400">Business.</span></h1>
+                <p
+                    class="font-normal md:text-xl sm:text-lg text-sm xl:text-white text-gray-500 text-center sm:pt-6 sm:pb-9 pt-3 pb-6">
+                    Seamless integration with your CRM and Facebook</p>
+                <input type="email" placeholder="Enter you work email"
+                    class="font-medium sm:text-lg text-sm rounded-full md:py-5 sm:py-3 py-2 flex lg:w-[570px] md:w-[450px] sm:w-[350px] w-[290px] mx-auto pl-4 focus:outline-none xl:border-none border-gray-400 border-2">
+                <div class="relative lg:mt-28 md:mt-16 sm:mt-12 mt-8 xl:left-[9%] 2xl:left-0">
+                    <img src="assets/img/png/hero-graph1.png" alt="graph"
+                        class="2xl:max-w-[963px] xl:max-w-[750px] lg:max-w-[550px] md:max-w-[450px] sm:max-w-[350px] max-w-[245px] w-full">
+                    <div class="absolute top-[27%] 2xl:left-[37%] left-[28%] ">
+                        <img src="assets/img/png/hero-graph2.png" alt="graph"
+                            class="2xl:max-w-[963px] xl:max-w-[750px] lg:max-w-[550px] md:max-w-[450px] sm:max-w-[350px] max-w-[245px] w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------------------------dashboard navtab---------------------- -->
+        <section class="xl:pt-28 lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
+            <div class="container">
+                <h2
+                    class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center max-w-[1010px] mx-auto">
+                    See your revenue grow in<br>
+                    real time with our dashboards.</h2>
+                <div class="tab-card relative">
+                    <img src="assets/img/png/arrow-left.png" alt="left-arrow"
+                        class="absolute w-[85px] 2xl:bottom-[-8%] bottom-[-6%] left-[4%] md:block hidden">
+                    <img src="assets/img/png/arrow-right.png" alt="arrow-right"
+                        class="absolute max-w-[85px] xl:top-[14%] lg:top-[19%] top-[16%] right-[3%] md:block hidden">
+                    <div
+                        class="nav-tabs gap-4 flex flex-wrap justify-center max-w-[1134px] mx-auto md:py-8 sm:py-6 py-5">
+                        <div class="tab sm:py-5 sm:px-8 py-3 px-5 border-2 border-[gray-400] rounded-full text-gray-400 bg-gray-100 font-medium text-xl leading-none whitespace-nowrap"
+                            data-target="tab1">CRM Integrations</div>
+                        <div class="tab sm:py-5 sm:px-8 py-3 px-5 border-2 border-[gray-400] rounded-full text-gray-400 bg-gray-100 font-medium text-xl leading-none whitespace-nowrap"
+                            data-target="tab2">Marketing Platform Integrations</div>
+                        <div class="tab sm:py-5 sm:px-8 py-3 px-5 border-2 border-[gray-400] rounded-full text-gray-400 bg-gray-100 font-medium text-xl leading-none"
+                            data-target="tab3">Analytics</div>
+                        <div class="tab sm:py-5 sm:px-8 py-3 px-5 border-2 border-[gray-400] rounded-full text-gray-400 bg-gray-100 font-medium text-xl leading-none whitespace-nowrap"
+                            data-target="tab4">Easy, Safe and Secured</div>
+                    </div>
+                    <div
+                        class="tab-content shadow-[0px_14px_30.5px_0px#00000026] lg:py-14 md:py-12 sm:py-8 py-6 lg:px-10 md:px-9 sm:px-8 px-6 md:rounded-[48px] sm:rounded-3xl rounded-2xl max-w-[1297px] mx-auto custom-box">
+                        <div id="tab1" class="content active">
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla
+                                pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque
+                                laudantium, totam rem aperiam,
+                                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                                sunt
+                                explicabo.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla
+                                pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                fugiat
+                                nulla pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla
+                                pariatur.
+                            </div>
+                        </div>
+                        <div id="tab2" class="content">
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque
+                                laudantium, totam rem aperiam,
+                                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                                sunt
+                                explicabo.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla
+                                pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla
+                                pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                fugiat
+                                nulla pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla
+                                pariatur.
+                            </div>
+                        </div>
+                        <div id="tab3" class="content">
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                fugiat
+                                nulla pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque
+                                laudantium, totam rem aperiam,
+                                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                                sunt
+                                explicabo.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla
+                                pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla
+                                pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla
+                                pariatur.
+                            </div>
+                        </div>
+                        <div id="tab4" class="content">
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla
+                                pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla
+                                pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque
+                                laudantium, totam rem aperiam,
+                                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                                sunt
+                                explicabo.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                fugiat
+                                nulla pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla
+                                pariatur.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--------------------------- marketing classes------------------------------ -->
+        <section class="xl:pt-28 lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
+            <div class="container">
+                <h2
+                    class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center max-w-[790px] mx-auto">
+                    Marketing analytics that REALLY matter</h2>
+                <div class="lg:pb-14 md:pb-11 sm:pb-9 pb-1 max-w-[1027px] mx-auto pt-5">
+                    <img src="assets/img/png/marketing-graph.png" alt="marketing-graph">
+                </div>
+                <div class="tab-card md:py-8 sm:py-6 py-5 relative">
+                    <img src="assets/img/png/down-arrow.png" alt="down-arrow"
+                        class="absolute max-w-[85px] right-[22%] bottom-[-2%] md:block hidden">
+                    <div class="nav-tabs gap-4 flex flex-wrap justify-center max-w-[1034px] mx-auto">
+                        <div class="tab sm:py-5 sm:px-8 py-3 px-4 border-2 border-[gray-400] rounded-full text-gray-400 bg-gray-100 font-medium text-xl leading-none whitespace-nowrap"
+                            data-target="tab5">Spending</div>
+                        <div class="tab sm:py-5 sm:px-8 py-3 px-4 border-2 border-[gray-400] rounded-full text-gray-400 bg-gray-100 font-medium text-xl leading-none whitespace-nowrap"
+                            data-target="tab6">Reach</div>
+                        <div class="tab sm:py-5 sm:px-8 py-3 px-4 border-2 border-[gray-400] rounded-full text-gray-400 bg-gray-100 font-medium text-xl leading-none"
+                            data-target="tab7">Revenue</div>
+                        <div class="tab sm:py-5 sm:px-8 py-3 px-4 border-2 border-[gray-400] rounded-full text-gray-400 bg-gray-100 font-medium text-xl leading-none whitespace-nowrap"
+                            data-target="tab8">Inbound Leads</div>
+
+                        <div class="tab sm:py-5 sm:px-8 py-3 px-4 border-2 border-[gray-400] rounded-full text-gray-400 bg-gray-100 font-medium text-xl leading-none whitespace-nowrap"
+                            data-target="tab9">Campaigns</div>
+                    </div>
+
+                    <div
+                        class="tab-content shadow-[0px_14px_30.5px_0px#00000026] lg:py-14 md:py-12 sm:py-8 py-6 lg:px-10 md:px-9 sm:px-8 px-6 md:rounded-[48px] sm:rounded-3xl rounded-2xl max-w-[1123px] mx-auto custom-box">
+                        <div id="tab5" class="content active">
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque
+                                ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                                explicabo.
+                            </div>
+
+                        </div>
+                        <div id="tab6" class="content">
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+
+
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore
+                                magna
+                                aliqua.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam,
+                                eaque
+                                ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                                explicabo.
+                            </div>
+
+                        </div>
+                        <div id="tab7" class="content">
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore
+                                magna
+                                aliqua.
+
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam,
+                                eaque
+                                ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                                explicabo.
+                            </div>
+
+                        </div>
+                        <div id="tab8" class="content">
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore
+                                magna
+                                aliqua.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam,
+                                eaque
+                                ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                                explicabo.
+                            </div>
+
+                        </div>
+                        <div id="tab9" class="content">
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+
+                                Ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam,
+                                eaque
+                                ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                                explicabo.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur.
+                            </div>
+                            <div class="md:gap-5 sm:gap-4 gap-3 flex font-normal md:text-lg text-sm sm:pb-6 pb-3">
+                                <span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2437_493)">
+                                            <path
+                                                d="M12.0001 21.5999L6.40011 15.9999L4.53345 17.8666L12.0001 25.3332L28.0001 9.33322L26.1334 7.46655L12.0001 21.5999Z"
+                                                fill="#3B5998" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2437_493">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore
+                                magna
+                                aliqua.
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------------------main campaign section-------------------------------- -->
+        <section class="xl:pt-[164px] lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
+            <div class="container max-w-[1720px] mx-auto">
+                <h2 class="font-bold lg:text-[65px] md:text-5xl text-3xl leading-[115%] text-center">How <span
+                        class="text-darkblue">Main Campaign</span> Sync Works</h2>
+                <div class="flex pt-16 gap-5 flex-wrap justify-center">
+                    <div
+                        class="shadow-[0px_14px_30.5px_0px#00000026] max-w-[327px] rounded-3xl px-5 pt-4  pb-12 h-[197px] custom-card">
+                        <p class="text-darkblue font-bold text-2xl leading-tight text-center">Step #1</p>
+                        <p class="font-medium text-base leading-normal text-gray-400 pt-[14px] text-center">Facebook
+                            user fills
+                            out your Facebook ad’s instant
+                            lead form</p>
+                    </div>
+                    <div
+                        class="shadow-[0px_14px_30.5px_0px#00000026] max-w-[327px] rounded-3xl px-5 pt-4 pb-12 h-[197px] custom-card1">
+                        <p class="text-darkblue font-bold text-2xl leading-tight text-center">Step #2</p>
+                        <p class="font-medium text-base leading-normal text-gray-400 pt-[14px] text-center">Main
+                            Campaign
+                            automatically syncs inbound Facebook leads to sales CRM</p>
+                    </div>
+                    <div
+                        class="shadow-[0px_14px_30.5px_0px#00000026] max-w-[327px] rounded-3xl px-5 pt-4 pb-12 h-[197px] custom-card">
+                        <p class="text-darkblue font-bold text-2xl leading-tight text-center">Step #3</p>
+                        <p class="font-medium text-base leading-normal text-gray-400 pt-[14px] text-center">Lead makes a
+                            purchase in an offline setting (example; In person)</p>
+                    </div>
+                    <div
+                        class="shadow-[0px_14px_30.5px_0px#00000026] max-w-[327px] rounded-3xl px-5 pt-4 pb-12 h-[197px] custom-card1">
+                        <p class="text-darkblue font-bold text-2xl leading-tight text-center">Step #4</p>
+                        <p class="font-medium text-base leading-normal text-gray-400 pt-[14px] text-center">Sales team
+                            updates
+                            sales CRM with the Lead’s purchase revenue/p>
+                    </div>
+                    <div
+                        class="shadow-[0px_14px_30.5px_0px#00000026] max-w-[327px] rounded-3xl px-5 pt-4 h-[197px] custom-card">
+                        <p class="text-darkblue font-bold text-2xl leading-tight text-center">Step #5</p>
+                        <p class="font-medium text-base leading-normal text-gray-400 pt-[14px] text-center pb-4">Main
+                            Campaign
+                            attributes Lead’s purchase revenue to Facebook marketing campaigns. Now you know exactly
+                            which
+                            campaigns
+                            are driving purchases for your business</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------------------------sale section------------------------------------ -->
+        <section class="xl:pt-[141px] lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
+            <div class="container">
+                <h2
+                    class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center xl:pb-[76px] lg:pb-[144px] md:pb-12 sm:pb-10 pb-5 max-w-[991px] mx-auto text-center">
+                Understand are driven from your campaigns <span class="text-darkblue">how many sales</span></h2>
+                <div class="lg:flex flex-wrap">
+                    <div class="lg:w-6/12">
+                        <p
+                            class="font-medium md:text-xl sm:text-lg text-sm leading-[140%] text-black xl:pt-[90px] lg:text-left text-center">
+                            The issue with tracking
+                            marketing data in
+                            an online
+                            setting is that you’re not getting the full picture. Although you’re
+                            still making sales offline. it’s nearly impossible to track exactly what online campaigns
+                            are
+                            doin the
+                            job, and which
+                            ones aren’t...until now.</p>
+                        <p class="font-medium md:text-xl sm:text-lg text-sm leading-[140%] text-black sm:pt-5 pt-2">With
+                            Main Campaign, you can
+                            integrate your
+                            conversion data with Facebook conversion API and Offline Conversion Tracking
+                            directly.</p>
+                        <div
+                            class="flex max-w-[347px] lg:pt-14 md:pt-10 sm:pt-7 pt-5 max-md:flex-col max-md:text-center max-lg:mx-auto">
+                            <button
+                                class="font-bold text-xl leading-7 py-3 px-6 bg-darkblue rounded-[60px] text-white mr-4">
+                                Get Started</button>
+                            <div class="flex-col max-md:pt-4">
+                                <h2 class="font-bold text-lg leading-7 text-black">Free 14 days trial.</h2>
+                                <p class="font-medium text-base leading-7 text-black">no credit card required</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-6/12">
+                        <div>
+                            <img src="assets/img/png/facebook-user.png" alt="facebook-user'">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- --------------privacy section------------------------------- -->
+        <section class="xl:pt-[100px] lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
+            <div class="container max-w-[1787px] mx-auto">
+                <h2
+                    class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center xl:pb-[76px] lg:pb-16 md:pb-12 sm:pb-10 pb-7">
+                    With Main Campaign, <span class="text-darkblue">Your Privacy Matters</span></h2>
+                <div class="flex lg:gap-14 md:gap-10 sm:gap-8 gap-6 justify-center flex-wrap">
+                    <div
+                        class="sm:w-[351px] sm:h-[312px] w-[260px] h-[245px] shadow-[0px_14px_30.5px_0px#00000026] md:pt-8 sm:pt-7 pt-5 md:px-6 sm:px-5 px-4  rounded-3xl hover:scale-105 transition-transform duration-300 ease-in-out overflow-hidden">
+                        <div class="flex justify-center">
+                            <img src="assets/img/svg/sharing.svg" alt="no-sharing">
+                        </div>
+                        <p class="text-darkblue font-bold lg:text-xl md:text-lg text-base text-center md:pt-6 sm:pt-5 pt-4 lg:pb-5 md:pb-4
+                                 pb-3">No Sharing</p>
+                        <p class="font-medium lg:text-lg md:text-base text-sm text-gray-400 text-center">We Keep your
+                            information secure. We will never share any lead data to other companies.</p>
+
+                    </div>
+                    <div
+                        class="sm:w-[351px] sm:h-[312px] w-[260px] h-[245px] shadow-[0px_14px_30.5px_0px#00000026] md:pt-8 sm:pt-7 pt-5 md:px-6 sm:px-5 px-4  rounded-3xl hover:scale-105 transition-transform duration-300 ease-in-out overflow-hidden">
+                        <div class="flex justify-center">
+                            <img src="assets/img/svg/complaint.svg" alt="complaint">
+                        </div>
+                        <p
+                            class="text-darkblue font-bold lg:text-xl md:text-lg text-base text-center md:pt-6 sm:pt-5 pt-4 lg:pb-2 pb-1">
+                            GDPR, CCPA, PCI, Facebook, Google compliant</p>
+                        <p class="font-medium lg:text-lg md:text-base text-sm text-gray-400 text-center">Big Companies
+                            choose to work with us for a reason. Get a trusted partner that puts your security first.
+                        </p>
+
+                    </div>
+                    <div
+                        class="sm:w-[351px] sm:h-[312px] w-[260px] h-[245px] shadow-[0px_14px_30.5px_0px#00000026] md:pt-8 sm:pt-7 pt-5 md:px-6 sm:px-5 px-4  rounded-3xl hover:scale-105 transition-transform duration-300 ease-in-out overflow-hidden">
+                        <div class="flex justify-center">
+                            <img src="assets/img/svg/complaint.svg" alt="complaint">
+                        </div>
+                        <p class="text-darkblue font-bold lg:text-xl md:text-lg text-base text-center md:pt-6 sm:pt-5 pt-4 lg:pb-5 md:pb-4
+                                 pb-3">Advanced Security</p>
+                        <p class="font-medium lg:text-lg md:text-base text-sm text-gray-400 text-center">Laser-targeted
+                            segmentation, Local store distribution, automation rules and filters, and more. We put
+                            security first.</p>
+
+                    </div>
+                    <div
+                        class="sm:w-[351px] sm:h-[312px] w-[260px] h-[245px] shadow-[0px_14px_30.5px_0px#00000026] md:pt-8 sm:pt-7 pt-5 md:pl-[22px] md:pr-7 sm:px-5 px-4 rounded-3xl hover:scale-105 transition-transform duration-300 ease-in-out overflow-hidden">
+                        <div class="flex justify-center">
+                            <img src="assets/img/svg/marketing.svg" alt="marketing">
+                        </div>
+                        <p class="text-darkblue font-bold lg:text-xl md:text-lg text-base text-center md:pt-6 sm:pt-5 pt-4 lg:pb-5 md:pb-4
+                                                     pb-3">Conset-based Marketing</p>
+                        <p class="font-medium lg:text-lg md:text-base text-sm text-gray-400 text-center">Making
+                            conset-based marketing the most scalable, efficient, and safest method for customer
+                            acquistion.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- -------------------business section--------------------------- -->
+        <section id="business" class="xl:pt-[149px] lg:pt-24 md:pt-16 sm:pt-12 pt-10 overflow-hidden">
+            <div class="container">
+                <h2
+                    class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center xl:pb-[76px] lg:pb-16 md:pb-12 sm:pb-10 pb-7 max-w-[896px] mx-auto">
+                    Businesses generate more revenue with Main Campaign</h2>
+                <div
+                    class="flex justify-center gap-12 xl:pt-[76px] lg:pt-16 pt-2 slider lg:pb-14 md:pb-10 sm:pb-8 pb-6 ">
+                    <div
+                        class="slider-width bg-white relative shadow-[0px_14px_30.5px_0px#00000026] md:rounded-[48px] rounded-3xl custom-blueline pl-6 lg:ml-12 md:ml-10 sm:ml-8 ml-6">
+                        <div
+                            class="absolute xl:top-[-26%] xl:left-[17%] lg:top-[-22%] lg:left-[9%] md:left-[17%] md:top-[-27%] top-[-15%] left-[26%]">
+                            <img src="assets/img/svg/next.svg" alt="next-svg" class="md:w-auto md:h-auto w-48 h-40">
+                        </div>
+                        <p class="font-bold md:text-2xl text-xl pt-28 pb-2">Next Technologies</p>
+                        <p class="font-medium text-base text-lightblue leading-6">“Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.”</p>
+                        <div class="flex gap-2 pt-9">
+                            <img src="assets/img/svg/james.svg" alt="person">
+                            <div class="flex-col">
+                                <p class="text-black font-bold sm:text-xl text-lg">James</p>
+                                <p class="font-medium sm:text-sm text-xs text-lightblue">Co-Founder at Slash next
+                                    technologies.</p>
+                            </div>
+                        </div>
+                        <div class="border-[1px] mt-7"></div>
+                        <div class="flex justify-center pt-7">
+                            <button
+                                class="font-bold text-sm leading-7 py-3 px-12 bg-darkblue rounded-[60px] text-white mr-4 cursor-pointer">
+                                Read more</button>
+                        </div>
+                    </div>
+                    <div
+                        class="slider-width bg-white relative shadow-[0px_14px_30.5px_0px#00000026] md:rounded-[48px] rounded-3xl custom-blueline pl-6 lg:ml-12 md:ml-10 sm:ml-8 ml-6">
+                        <div
+                            class="absolute xl:top-[-26%] xl:left-[17%] lg:top-[-22%] lg:left-[9%] md:left-[17%] md:top-[-27%] top-[-15%] left-[26%]">
+                            <img src="assets/img/svg/code.svg" alt="code-svg" class="md:w-auto md:h-auto w-48 h-40 ">
+                        </div>
+                        <p class="font-bold md:text-2xl text-xl pt-28 pb-2">CodeSync Inc.</p>
+                        <p class="font-medium text-base text-lightblue leading-6">“Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.”</p>
+                        <div class="flex gap-2 pt-9">
+                            <img src="assets/img/svg/kathie.svg" alt="person">
+                            <div class="flex-col">
+                                <p class="text-black font-bold sm:text-xl text-lg">Kathie</p>
+                                <p class="font-medium sm:text-sm text-xs text-lightblue">Director and Founder at
+                                    CodeSync Inc.</p>
+                            </div>
+                        </div>
+                        <div class="border-[1px] mt-7"></div>
+                        <div class="flex justify-center pt-7">
+                            <button
+                                class="font-bold text-sm leading-7 py-3 px-12 bg-darkblue rounded-[60px] text-white mr-4 cursor-pointer">
+                                Read more</button>
+                        </div>
+                    </div>
+                    <div
+                        class="slider-width bg-white relative shadow-[0px_14px_30.5px_0px#00000026] md:rounded-[48px] rounded-3xl custom-blueline pl-6 lg:ml-12 md:ml-10 sm:ml-8 ml-6">
+                        <div
+                            class="absolute xl:top-[-26%] xl:left-[17%] lg:top-[-22%] lg:left-[9%] md:left-[17%] md:top-[-27%] top-[-15%] left-[26%]">
+                            <img src="assets/img/svg/raw.svg" alt="raw-svg" class="md:w-auto md:h-auto w-48 h-40 ">
+                        </div>
+                        <p class="font-bold md:text-2xl text-xl pt-28 pb-2">Urawarrior</p>
+                        <p class="font-medium text-base text-lightblue leading-6">“Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo
+                            consequat.”</p>
+                        <div class="flex gap-2 pt-9">
+                            <img src="assets/img/svg/bershan.svg" alt="person">
+                            <div class="flex-col">
+                                <p class="text-black font-bold sm:text-xl text-lg">Bershan Shaw</p>
+                                <p class="font-medium sm:text-sm text-xs text-lightblue">Founder at Urawarrior</p>
+                            </div>
+                        </div>
+                        <div class="border-[1px] mt-7"></div>
+                        <div class="flex justify-center pt-7">
+                            <button
+                                class="font-bold text-sm leading-7 py-3 px-12 bg-darkblue rounded-[60px] text-white mr-4 cursor-pointer">
+                                Read more</button>
+                        </div>
+                    </div>
+                    <div
+                        class="slider-width bg-white relative shadow-[0px_14px_30.5px_0px#00000026] md:rounded-[48px] rounded-3xl custom-blueline pl-6 lg:ml-12 md:ml-10 sm:ml-8 ml-6">
+                        <div
+                            class="absolute xl:top-[-26%] xl:left-[17%] lg:top-[-22%] lg:left-[9%] md:left-[17%] md:top-[-27%] top-[-15%] left-[26%]">
+                            <img src="assets/img/svg/code.svg" alt="code-svg" class="md:w-auto md:h-auto w-48 h-40 ">
+                        </div>
+                        <p class="font-bold md:text-2xl text-xl pt-28 pb-2">CodeSync Inc.</p>
+                        <p class="font-medium text-base text-lightblue leading-6">“Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.”</p>
+                        <div class="flex gap-2 pt-9">
+                            <img src="assets/img/svg/kathie.svg" alt="person">
+                            <div class="flex-col">
+                                <p class="text-black font-bold sm:text-xl text-lg">Kathie</p>
+                                <p class="font-medium sm:text-sm text-xs text-lightblue">Director and Founder at
+                                    CodeSync Inc.</p>
+                            </div>
+                        </div>
+                        <div class="border-[1px] mt-7"></div>
+                        <div class="flex justify-center pt-7">
+                            <button
+                                class="font-bold text-sm leading-7 py-3 px-12 bg-darkblue rounded-[60px] text-white mr-4 cursor-pointer">
+                                Read more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!------------------------------- scale section -------------------------------->
+        <section class="xl:pb-[90px] lg:pb-24 md:pb-16 sm:pb-12 pb-10 px-3 relative">
+            <div class="absolute -z-10 left-0 lg:bottom-[-32%] md:bottom-[-21%]">
+                <img src="assets/img/png/bottom-layer.png" alt="bottom-layer"
+                    class="lg:max-w-[686px] md:max-w-[400px] md:block hidden">
+            </div>
+            <div class="container">
+                <h2
+                    class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center sm:pb-[30px] pb-5">
+                    Are you ready to scale?</h2>
+                <div class="flex justify-center">
+                    <button
+                        class="font-bold text-base leading-7 py-5 px-7 bg-darkblue rounded-[60px] text-white mr-4 cursor-pointer">
+                        Start My Free Trial</button>
+                </div>
+                <div class="flex md:pt-9 sm:pt-7 pt-5">
+                    <img src="assets/img/png/scale.png" alt="scale" class="max-w-[1218px] mx-auto w-full">
+                </div>
+            </div>
+        </section>
+
+        <!-----------------------footer slider---------------------------------->
+        <section id="footer" class="footer-bg xl:pt-[101px] lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3 relative">
+            <div class="container">
+                <div
+                    class="flex logo-slider gap-20 xl:pb-16 lg:pb-14 md:pb-12 sm:pb-10 pb-8 transition-all duration-1000 ease-in-out">
+                    <img src="assets/img/svg/nog.svg" alt="nog svg" class="mr-20">
+                    <img src="assets/img/svg/air.svg" alt="air svg" class="mr-20">
+                    <img src="assets/img/svg/pro.svg" alt="pro svg" class="mr-20 w-[149px] h-[27px]">
+                    <img src="assets/img/svg/ari.svg" alt="ari svg" class="mr-20 w-[52px] h-[32px]">
+                    <img src="assets/img/svg/design.svg" alt="design svg" class="mr-20">
+                    <img src="assets/img/svg/brrok.svg" alt="brook svg" class="mr-20">
+                    <img src="assets/img/svg/okuma.svg" alt="okuma svg" class="mr-20">
+                    <img src="assets/img/svg/island.svg" alt="island svg" class="mr-20 w-[36px] h-[41px]">
+                    <img src="assets/img/svg/ari.svg" alt="ari svg" class="mr-20 w-[52px] h-[32px]">
+                    <img src="assets/img/svg/design.svg" alt="design svg" class="mr-20">
+                    <img src="assets/img/svg/brrok.svg" alt="brook svg" class="mr-20">
+                </div>
+                <div class="2xl:block hidden gap-3 mx-3">
+                    <button
+                        class="prev border bg-white items-center flex justify-center w-9 h-9 rounded-full cursor-pointer transition-all ease-linear duration-200 absolute top-[13%] left-[7%]">
+                        <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="21" cy="21.0273" r="21" fill="#EEEEEC" />
+                            <g clip-path="url(#clip0_6713_36)">
+                                <path
+                                    d="M24.41 25.6173L19.83 21.0273L24.41 16.4373L23 15.0273L17 21.0273L23 27.0273L24.41 25.6173Z"
+                                    fill="#3B5998" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6713_36">
+                                    <rect width="24" height="24" fill="white" transform="translate(9 9.02734)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                    <button
+                        class="next  border hover:bg-white items-center flex justify-center w-9 h-9 rounded-full cursor-pointer transition-all ease-linear duration-200 absolute top-[13%] right-[10%]">
+                        <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="21" cy="21" r="21" transform="matrix(-1 0 0 1 42 0.0273438)" fill="#EEEEEC" />
+                            <g clip-path="url(#clip0_6713_35)">
+                                <path
+                                    d="M17.59 25.6173L22.17 21.0273L17.59 16.4373L19 15.0273L25 21.0273L19 27.0273L17.59 25.6173Z"
+                                    fill="#3B5998" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6713_35">
+                                    <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 33 9.02734)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="border-[1px] border-dashed border-[#3B5998] max-w-[1600px] mx-auto"></div>
+            <div class="container">
+                <div
+                    class="flex xl:pt-16 lg:pt-12 md:pt-8 sm:pt-6 pt-4 justify-between pb-16 max-w-[1600px] mx-auto flex-wrap max-lg:justify-center max-lg:items-center px-3">
+                    <div class="w-4/12 max-lg:w-full flex max-lg:justify-center max-lg:items-center max-lg:mb-5">
+                        <img src="assets/img/png/logo.png" alt="footerlogo"
+                            class="lg:max-w-[200px] max-w-[300px] lg:h-[40px] h-[53px]">
+                    </div>
+                    <div class="w-2/12 max-lg:w-6/12 flex-col flex max-lg:items-center gap-6 max-md:gap-3 max-lg:pt-16">
+                        <p class="font-bold text-xl leading-6 text-black pb-6 uppercase">company</p>
+                        <ul>
+                            <li class=" font-light text-base leading-6 text-gray-400 pb-[10px] max-md:text-center">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="font-light text-base leading-6 text-gray-400 pb-[10px] max-md:text-center">
+                                <a href="#">About us</a>
+                            </li>
+                            <li class=" font-light text-base leading-6 text-gray-400 pb-[10px] max-md:text-center">
+                                <a href="#">Pricing</a>
+                            </li>
+                            <li class=" font-light text-base leading-6 text-gray-400 pb-[10px] max-md:text-center">
+                                <a href="#">Start free trial</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-2/12 max-lg:w-6/12 flex-col max-lg:items-center flex gap-6 max-md:gap-3">
+                        <p class="font-bold text-xl leading-6 text-black pb-6 uppercase">Support</p>
+                        <ul>
+                            <li class=" font-light text-base leading-6 text-gray-400 pb-[10px] max-md:text-center">
+                                <a href="#">Contact us
+                                </a>
+                            </li>
+                            <li class="font-light text-base leading-6 text-gray-400 pb-[10px] max-md:text-center">
+                                <a href="#">
+                                    FAQs</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div
+                        class="w-4/12 max-lg:w-full max-lg:justify-center max-lg:items-center flex flex-col gap-5 max-md:mt-3">
+                        <p class="font-bold text-xl leading-6 text-black pb-6 uppercase">subscribe</p>
+                        <input type="email" placeholder="Enter you work email" id="email"
+                            class="text-gray-400 md:py-5 py-4 pl-5 xl:w-[447px] w-[270px] max-lg:mx-auto flex border-2 border-[#E1E1FF] rounded-2xl outline-none">
+                        <p class="font-light text-base leading-6 text-gray-400 max-w-[447px] pt-5">By submitting your
+                            email
+                            you agree to our Terms of Use and Sale and Privacy Policy. You will receive email
+                            communications from us for marketing, informational, and promotional purposes and can
+                            opt-out at
+                            any time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border border-dashed border-[#3b5998] max-w-[1600px] mx-auto"></div>
+            <div class="container max-w-[1600px] mx-auto">
+                <div class="flex justify-between pt-10 lg:pb-16  sm:pb-12 pb-10 px-3 flex-wrap">
+                    <a href="" class="font-light text-sm leading-[22px] pt-3 text-gray-400">Privacy Policy • Terms &
+                        Conditions</a>
+                    <div class="flex gap-5">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img src="assets/img/svg/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="assets/img/svg/instagram.svg" alt="instagram">
+                        </a>
+                        <a href="https://in.linkedin.com/" target="_blank">
+                            <img src="assets/img/svg/linkdin.svg" alt="linkdin">
+                        </a>
+                        <a href="https://www.cricbuzz.com/" target="_blank">
+                            <img src="assets/img/svg/bouser.svg" alt="cb">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="top-btn w-14 h-14 rounded-full fixed bottom-7 right-7 bg-darkblue z-20 p-2 cursor-pointer flex justify-center items-center transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="white"
+                    class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708z" />
+                    <path fill-rule="evenodd"
+                        d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
+                </svg>
+            </div>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+            integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="assets/js/app.js"></script>
+    </body>
+
+</html>

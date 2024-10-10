@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "thicccboi";
+    src: url("../fonts/THICCCBOI-Bold.ttf");
+}
+@font-face {
+    font-family: "thicccboi" ;
+    src: url("../fonts/THICCCBOI-Medium.ttf");
+}
+@font-face {
+    font-family: "thicccboi";
+    src: url("../fonts/THICCCBOI-Regular.ttf");
+}
+
+@font-face {
+    font-family: "thicccboi";
+    src: url("../fonts/THICCCBOI-SemiBold.ttf");
+}
+  .body {
+      font-family: "thicccboi";
+  }
