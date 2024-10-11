@@ -105,7 +105,7 @@ $('.logo-slider').slick({
     ]
 });
 
-// backto-top-button
+// back-to-top-button
 const mybutton = document.querySelector(".top-btn");
 const show = document.querySelector(".active")
 
