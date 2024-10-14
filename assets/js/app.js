@@ -23,7 +23,7 @@ tabs.forEach(tab => {
 
 // business slider
 
-$('.slider').slick({
+$('.business-slider').slick({
     dots: true,
     infinite: true,
     speed: 300,

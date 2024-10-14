@@ -4,18 +4,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- -----------------------custom css----------------------- -->
         <link rel="stylesheet" href="assets/css/style.css">
+        <!-- -----------------favicon link-------------------------------- -->
         <link rel="shortcut icon" href="assets/img/webp/favicon.webp" type="image/x-icon">
+        <!-- ---------------------tailwind link--------------------------------------- -->
         <script src="https://cdn.tailwindcss.com"></script>
+        <!-- ---------------------------slider link-------------------------------- -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
             integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
             integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <!-- -------------------------aos link--------------------------- -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!-- Primary Meta Tags -->
-        <title>Campaign page</title>
+        <title>Main Campaign</title>
         <meta name="title" content="Campaign page" />
         <meta name="description" content=" The Most Powerful Offline Lead Conversion Data for your Businesses" />
 
@@ -52,250 +57,12 @@
                 }
 
             }
-        </script>
-        <!--------------------------- css ------------------------------->
-        <style>
-            body {
-                font-family: "thicccboi", sans-serif;
-                scroll-behavior: smooth;
-            }
-
-            @font-face {
-                font-family: thicccboi;
-                src: url(../fonts/THICCCBOI-Light.ttf);
-                font-weight: 300;
-            }
-
-            @font-face {
-                font-family: thicccboi;
-                src: url(../fonts/THICCCBOI-Regular.ttf);
-                font-weight: 400;
-            }
-
-            @font-face {
-                font-family: thicccboi;
-                src: url(../fonts/THICCCBOI-Medium.ttf);
-                font-weight: 500;
-            }
-
-            @font-face {
-                font-family: thicccboi;
-                src: url(../fonts/THICCCBOI-SemiBold.ttf);
-                font-weight: 600;
-            }
-
-            @font-face {
-                font-family: thicccboi;
-                src: url(assets/fonts/THICCCBOI-Bold.ttf);
-                font-weight: 700;
-            }
-
-
-            .leading-120 {
-                line-height: 120% !important;
-            }
-
-            .leading-150 {
-                line-height: 150% !important;
-            }
-
-            .text-darkblue {
-                color: #3B5998;
-            }
-
-            .footer-bg {
-                background-color: #FAF9F6;
-            }
-            .nav-tabs .active{
-                 background-color: #3B5998;
-            }
-
-            .bg-darkblue {
-                background-color: #3B5998;
-            }
-
-            .text-lightblue {
-                color: #7D889E;
-            }
-
-            .box-shadow {
-                box-shadow: 0px 4px 30px 0px #00000026
-            }
-
-            .body {
-                font-family: "thicccboi";
-            }
-
-            .tab.active {
-                background-color: #3B5998;
-                font-weight: bold;
-                border: 2px solid #3B5998;
-                color: white;
-            }
-
-            .tab-content .content {
-                display: none;
-            }
-
-            .tab-content .content.active {
-                display: block;
-            }
-
-            .custom-box {
-                border-radius: 48px !important;
-                padding: 20px;
-                background-color: white;
-                position: relative;
-            }
-
-            .custom-box:before {
-                content: "";
-                position: absolute;
-                top: -8px;
-                left: -1px;
-                right: -1px;
-                height: 50px;
-                z-index: -10 !important;
-                border-radius: 50px 50px 0 0 !important;
-                background: linear-gradient(259.08deg, #50EDFF -5.05%, #48B8DA 63.97%, #3B5998 130.42%);
-            }
-
-            .custom-card {
-                border-radius: 24px !important;
-                padding: 20px;
-                background-color: white;
-                position: relative;
-            }
-
-            .custom-card:before {
-                content: "";
-                position: absolute;
-                top: -4px;
-                left: -1px;
-                right: -1px;
-                height: 50px;
-                z-index: -10 !important;
-                border-radius: 24px 24px 0 0 !important;
-                background: linear-gradient(259.08deg, #50EDFF -5.05%, #48B8DA 63.97%, #3B5998 130.42%);
-            }
-
-            .custom-card1 {
-                border-radius: 24px !important;
-                padding: 20px;
-                background-color: white;
-                position: relative;
-            }
-
-            .custom-card1:after {
-                content: "";
-                position: absolute;
-                bottom: -4px;
-                left: -1px;
-                right: -1px;
-                height: 50px;
-                z-index: -10 !important;
-                border-radius: 0px 0px 24px 24px !important;
-                background: linear-gradient(259.08deg, #50EDFF -5.05%, #48B8DA 63.97%, #3B5998 130.42%);
-            }
-
-            .custom-blueline {
-                border-radius: 48px !important;
-                padding: 20px;
-                background-color: white;
-                position: relative;
-            }
-
-            .custom-blueline::before {
-                content: "";
-                position: absolute;
-                top: -8px;
-                left: -1px;
-                right: -1px;
-                height: 50px;
-                z-index: -10 !important;
-                border-radius: 48px 48px 0px 0px !important;
-                background-color: #3B5998;
-            }
-
-            .slick-dots li.slick-active button:before {
-                color: #3B5998 !important;
-                opacity: .75;
-                font-size: 10px;
-            }
-
-            .slick-dots li button:before {
-                color: #FAF9F6;
-                font-size: 10px;
-            }
-
-            .slick-list {
-                position: relative;
-                display: block;
-                overflow: hidden;
-                padding-top: 100px !important;
-            }
-
-            #business .slider-width {
-                max-width: 446px !important;
-            }
-
-            #business .slick-next {
-                display: none !important;
-            }
-
-            #business .slick-prev {
-                display: none !important;
-            }
-
-            #footer .slick-dots {
-                display: none !important;
-            }
-
-            #footer .slick-list {
-                padding-top: 0 !important;
-            }
-
-            .top-btn {
-                visibility: hidden;
-                padding: 10px;
-                z-index: 15;
-                transition: .3s;
-            }
-
-            .top-btn.active {
-                visibility: visible;
-            }
-
-            .slick-track {
-                padding-bottom: 40px !important;
-            }
-            
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-        </style>
+        </script>          
     </head>
 
     <body>
         <!-- --------------------hero-section------------------------------------- -->
-        <section class="relative lg:pt-20 md:pt-14 sm:pt-10 pt-9 max-w-[1920px] mx-auto px-3 overflow-hidden pb-7">
+        <section id="hero" class="relative lg:pt-20 md:pt-14 sm:pt-10 pt-9 max-w-[1920px] mx-auto px-3 overflow-hidden pb-7">
             <img src="assets/img/webp/hero-layer.webp" alt="hero-layer" data-aos="zoom-in-up" data-aos-duration="1200"
                 class="absolute top-0 right-0 -z-10 2xl:max-w-[1286px] xl:max-w-[1065px] lg:max-w-[730px] md:max-w-[580px] sm:max-w-[400px] sm:block hidden pointer-events-none">
             <div class="container">
@@ -332,7 +99,7 @@
         </section>
 
         <!-- ------------------------dashboard navtab---------------------- -->
-        <section class="xl:pt-28 lg:pt-24 md:pt-16 sm:pt-12 pt-1 px-3">
+        <section id="dashboard" class="xl:pt-28 lg:pt-24 md:pt-16 sm:pt-12 pt-1 px-3">
             <div class="container">
                 <h2 data-aos="zoom-in-up" data-aos-duration="1200"
                     class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold leading-120 text-black text-center max-w-[1010px] mx-auto">
@@ -527,7 +294,7 @@
         </section>
 
         <!--------------------------- marketing classes-------------------------------->
-        <section class="xl:pt-28 lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
+        <section id="marketing" class="xl:pt-28 lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
             <div class="container">
                 <h2 data-aos="zoom-in-up" data-aos-duration="1200"
                     class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center max-w-[790px] mx-auto leading-120">
@@ -590,7 +357,7 @@
         </section>
 
         <!-- ---------------------main campaign section-------------------------------- -->
-        <section class="xl:pt-[164px] lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
+        <section id="main" class="xl:pt-[164px] lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
             <div class="container max-w-[1720px] mx-auto">
                 <h2 data-aos="zoom-in-up" data-aos-duration="1200"
                     class="font-bold lg:text-[65px] md:text-5xl text-3xl leading-[115%] text-center leading-120">How
@@ -635,7 +402,7 @@
         </section>
 
         <!-- ---------------------------sale section------------------------------------ -->
-        <section class="xl:pt-[141px] lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
+        <section id="sale" class="xl:pt-[141px] lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
             <div class="container">
                 <h2 data-aos="zoom-in-up" data-aos-duration="1200"
                     class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black xl:pb-[76px] lg:pb-[144px] md:pb-12 sm:pb-10 pb-5 max-w-[991px] mx-auto text-center leading-120">
@@ -674,7 +441,7 @@
         </section>
 
         <!-- --------------privacy section------------------------------- -->
-        <section class="xl:pt-[100px] lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
+        <section id="privacy" class="xl:pt-[100px] lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3">
             <div class="container max-w-[1787px] mx-auto">
                 <h2 data-aos="zoom-in-up" data-aos-duration="1200"
                     class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center xl:pb-[76px] lg:pb-16 md:pb-12 sm:pb-10 pb-7 leading-120">
@@ -735,7 +502,7 @@
                 <h2 data-aos="zoom-in-up" data-aos-duration="1200"
                     class="xl:text-[65px] lg:text-6xl md:text-5xl sm:text-3xl text-2xl font-bold text-black text-center xl:pb-[76px] lg:pb-16 md:pb-12 sm:pb-10 pb-7 max-w-[896px] mx-auto leading-120">
                     Businesses generate more revenue with Main Campaign</h2>
-                <div class="flex justify-center gap-12 slider" data-aos="zoom-in-up" data-aos-duration="1200">
+                <div class="flex justify-center gap-12 business-slider" data-aos="zoom-in-up" data-aos-duration="1200">
                     <div class="slider-width bg-white relative box-shadow md:rounded-[48px] rounded-3xl custom-blueline pl-6 lg:ml-12 md:ml-10 sm:ml-8 ml-6 pb-8">
                         <div
                             class="absolute xl:top-[-26%] xl:left-[17%] lg:top-[-22%] lg:left-[9%] md:left-[17%] md:top-[-27%] top-[-15%] left-[26%]">
@@ -754,7 +521,7 @@
                                     technologies.</p>
                             </div>
                         </div>
-                        <div class="border-[1px] mt-7"></div>
+                        <div class="border mt-7"></div>
                         <div class="flex justify-center pt-7">
                             <button
                                 class="font-bold text-sm leading-7 py-2 px-[50px] bg-darkblue rounded-[60px] hover:scale-110 transition-all duration-300 text-white mr-4 cursor-pointer">
@@ -779,7 +546,7 @@
                                     CodeSync Inc.</p>
                             </div>
                         </div>
-                        <div class="border-[1px] mt-7"></div>
+                        <div class="border mt-7"></div>
                         <div class="flex justify-center pt-7">
                             <button
                                 class="font-bold text-sm leading-7 hover:scale-110 transition-all duration-300 py-2 px-[50px] bg-darkblue rounded-[60px] text-white mr-4 cursor-pointer">
@@ -805,7 +572,7 @@
                                 <p class="font-medium sm:text-sm text-xs text-lightblue">Founder at Urawarrior</p>
                             </div>
                         </div>
-                        <div class="border-[1px] mt-7"></div>
+                        <div class="border mt-7"></div>
                         <div class="flex justify-center pt-7">
                             <button
                                 class="font-bold text-sm leading-7 hover:scale-110 transition-all duration-300 py-2 px-[50px] bg-darkblue rounded-[60px] text-white mr-4 cursor-pointer">
@@ -830,7 +597,7 @@
                                     CodeSync Inc.</p>
                             </div>
                         </div>
-                        <div class="border-[1px] mt-7"></div>
+                        <div class="border mt-7"></div>
                         <div class="flex justify-center pt-7">
                             <button
                                 class="font-bold text-sm leading-7 hover:scale-110 transition-all duration-300 py-2 px-[50px] bg-darkblue rounded-[60px] text-white mr-4 cursor-pointer">
@@ -842,7 +609,7 @@
         </section>
 
         <!------------------------------- scale section -------------------------------->
-        <section class="xl:py-[90px] lg:py-24 md:py-16 sm:py-12 py-10 px-3 relative">
+        <section id="scale" class="xl:py-[90px] lg:py-24 md:py-16 sm:py-12 py-10 px-3 relative">
             <div class="absolute -z-10 left-0 lg:bottom-[-32%] md:bottom-[-21%]">
                 <img src="assets/img/webp/bottom-layer.webp" alt="bottom-layer"
                     class="lg:max-w-[686px] md:max-w-[400px] md:block hidden pointer-events-none">
@@ -914,7 +681,7 @@
                     </button>
                 </div>
             </div>
-            <div class="border-[1px] border-dashed border-[#3B5998] max-w-[1600px] mx-auto"></div>
+            <div class="border border-dashed border-[#3B5998] max-w-[1600px] mx-auto"></div>
             <div class="container">
                 <div data-aos="zoom-in-up" data-aos-duration="1200"
                     class="flex xl:pt-[77px] lg:pt-12 md:pt-8 sm:pt-6 pt-4 justify-between lg:pb-16 md:pb-10 sm:pb-8 pb-6 max-w-[1600px] mx-auto flex-wrap max-lg:justify-center max-lg:items-center px-3">
@@ -932,15 +699,15 @@
                             </li>
                             <li
                                 class="font-light text-base leading-6 text-gray-400 pb-4 max-md:text-center hover:text-darkblue transition-all duration-300">
-                                <a href="#">About us</a>
+                                <a href="#privacy">About us</a>
                             </li>
                             <li
                                 class=" font-light text-base leading-6 text-gray-400 pb-4 max-md:text-center hover:text-darkblue transition-all duration-300">
-                                <a href="#">Pricing</a>
+                                <a href="#sale">Pricing</a>
                             </li>
                             <li
                                 class=" font-light text-base leading-6 text-gray-400 pb-4 max-md:text-center hover:text-darkblue transition-all duration-300">
-                                <a href="#">Start free trial</a>
+                                <a href="#scale">Start free trial</a>
                             </li>
                         </ul>
                     </div>
@@ -1006,13 +773,16 @@
                 </svg>
             </div>
         </section>
+        <!-- ------------------------slider link------------------------- -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
             integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
             integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <!-- -------------------aos link--------------------------- -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- -------------------aos js---------------------- -->
         <script>
             AOS.init({
                 once: true
