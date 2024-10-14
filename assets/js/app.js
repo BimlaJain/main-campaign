@@ -60,7 +60,7 @@ $('.slider').slick({
 $('.logo-slider').slick({
     slidesToShow: 8,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 1000,
     nextArrow: ".next",
     prevArrow: ".prev",
