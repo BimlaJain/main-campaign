@@ -269,6 +269,27 @@
             .slick-track {
                 padding-bottom: 40px !important;
             }
+            
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
         </style>
     </head>
 
@@ -515,12 +536,12 @@
                     <img src="assets/img/webp/marketing-graph.webp" alt="marketing-graph" data-aos="zoom-in-up"
                         data-aos-duration="1200" class="pointer-events-none">
                 </div>
-                <div class="tab-card relative">
+                <div class="relative">
                     <img src="assets/img/webp/down-arrow.webp" alt="down-arrow" data-aos="zoom-in-up"
                         data-aos-duration="1200"
                         class="absolute max-w-[85px] right-[22%] bottom-[-10%] md:block hidden pointer-events-none">
                     <div data-aos="zoom-in-up" data-aos-duration="1200"
-                        class="nav-tabs gap-4 flex flex-wrap justify-center max-w-[1034px] mx-auto cursor-pointer lg:pb-9 md:pb-7 sm:pb-6 pb-5">
+                        class=" gap-4 flex flex-wrap justify-center max-w-[1034px] mx-auto cursor-pointer lg:pb-9 md:pb-7 sm:pb-6 pb-5">
                         <div class="sm:py-5 sm:px-8 py-3 px-4 border-2 border-[gray-400] rounded-full text-white bg-darkblue font-medium text-xl leading-none whitespace-nowrap"
                             data-target="tab5">Spending</div>
                         <div class="sm:py-5 sm:px-8 py-3 px-4 border-2 border-[gray-400] rounded-full text-gray-400 bg-gray-100 font-medium text-xl leading-none whitespace-nowrap"
@@ -534,8 +555,8 @@
                             data-target="tab9">Campaigns</div>
                     </div>
                     <div
-                        class="tab-content box-shadow lg:py-10 sm:py-8 py-6 lg:px-10 md:px-9 sm:px-8 px-6 md:rounded-[48px] sm:rounded-3xl rounded-2xl max-w-[1123px] mx-auto custom-box">
-                        <div id="tab5" data-aos="zoom-in-up" data-aos-duration="1200" class="content active">
+                        class=" box-shadow lg:py-10 sm:py-8 py-6 lg:px-10 md:px-9 sm:px-8 px-6 md:rounded-[48px] sm:rounded-3xl rounded-2xl max-w-[1123px] mx-auto custom-box">
+                        <div data-aos="zoom-in-up" data-aos-duration="1200">
                             <div class="flex md:gap-5 sm:gap-4 gap-3 items-start md:pb-6 sm:pb-5 pb-4">
                                 <img src="assets/img/svg/tick.svg" alt="tick">
                                 <p class="max-w-[971px] font-normal text-lg leading-150">
@@ -562,126 +583,7 @@
                                     explicabo.</p>
                             </div>
                         </div>
-                        <div id="tab6" data-aos="zoom-in-up" data-aos-duration="1200" class="content">
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start md:pb-6 sm:pb-5 pb-4">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[971px] font-normal text-lg leading-150">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore
-                                    magna
-                                    aliqua.</p>
-                            </div>
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start md:pb-6 sm:pb-5 pb-4">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[1055px] font-normal text-lg leading-150">Duis aute irure dolor in
-                                    reprehenderit in voluptate velit
-                                    esse cillum dolore eu fugiat nulla pariatur.</p>
-                            </div>
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start md:pb-6 sm:pb-5 pb-4">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[1055px] font-normal text-lg leading-150"> Sed ut perspiciatis unde
-                                    omnis iste natus error sit
-                                    voluptatem accusantium doloremque laudantium.</p>
-                            </div>
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[1055px] font-normal text-lg leading-150">Ut perspiciatis unde omnis
-                                    iste natus error sit voluptatem
-                                    accusantium doloremque laudantium, totam rem aperiam, eaque
-                                    ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                                    explicabo.</p>
-                            </div>
-                        </div>
-                        <div id="tab7" data-aos="zoom-in-up" data-aos-duration="1200" class="content">
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start md:pb-6 sm:pb-5 pb-4">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[971px] font-normal text-lg leading-150">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore
-                                    magna
-                                    aliqua.</p>
-                            </div>
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start md:pb-6 sm:pb-5 pb-4">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[1055px] font-normal text-lg leading-150">Sed ut perspiciatis unde omnis
-                                    iste natus error sit
-                                    voluptatem accusantium doloremque laudantium.</p>
-                            </div>
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start md:pb-6 sm:pb-5 pb-4">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[1055px] font-normal text-lg leading-150">Duis aute irure dolor in
-                                    reprehenderit in voluptate velit
-                                    esse cillum dolore eu fugiat nulla pariatur.</p>
-                            </div>
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[1055px] font-normal text-lg leading-150">Ut perspiciatis unde omnis
-                                    iste natus error sit voluptatem
-                                    accusantium doloremque laudantium, totam rem aperiam, eaque
-                                    ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                                    explicabo.</p>
-                            </div>
-                        </div>
-                        <div id="tab8" data-aos="zoom-in-up" data-aos-duration="1200" class="content">
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start md:pb-6 sm:pb-5 pb-4">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[971px] font-normal text-lg leading-150">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore
-                                    magna
-                                    aliqua.</p>
-                            </div>
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start md:pb-6 sm:pb-5 pb-4">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[1055px] font-normal text-lg leading-150">Duis aute irure dolor in
-                                    reprehenderit in voluptate velit
-                                    esse cillum dolore eu fugiat nulla pariatur.</p>
-                            </div>
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start md:pb-6 sm:pb-5 pb-4">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[1055px] font-normal text-lg leading-150"> Sed ut perspiciatis unde
-                                    omnis iste natus error sit
-                                    voluptatem accusantium doloremque laudantium.</p>
-                            </div>
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[1055px] font-normal text-lg leading-150">Ut perspiciatis unde omnis
-                                    iste natus error sit voluptatem
-                                    accusantium doloremque laudantium, totam rem aperiam, eaque
-                                    ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                                    explicabo.</p>
-                            </div>
-                        </div>
-                        <div id="tab9" data-aos="zoom-in-up" data-aos-duration="1200" class="content">
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start md:pb-6 sm:pb-5 pb-4">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[971px] font-normal text-lg leading-150">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore
-                                    magna
-                                    aliqua.</p>
-                            </div>
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start md:pb-6 sm:pb-5 pb-4">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[1055px] font-normal text-lg leading-150">Duis aute irure dolor in
-                                    reprehenderit in voluptate velit
-                                    esse cillum dolore eu fugiat nulla pariatur.</p>
-                            </div>
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start md:pb-6 sm:pb-5 pb-4">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[1055px] font-normal text-lg leading-150"> Sed ut perspiciatis unde
-                                    omnis iste natus error sit
-                                    voluptatem accusantium doloremque laudantium.</p>
-                            </div>
-                            <div class="flex md:gap-5 sm:gap-4 gap-3 items-start">
-                                <img src="assets/img/svg/tick.svg" alt="tick">
-                                <p class="max-w-[1055px] font-normal text-lg leading-150">Ut perspiciatis unde omnis
-                                    iste natus error sit voluptatem
-                                    accusantium doloremque laudantium, totam rem aperiam, eaque
-                                    ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                                    explicabo.</p>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -965,28 +867,17 @@
         <section id="footer" class="footer-bg xl:pt-[101px] lg:pt-24 md:pt-16 sm:pt-12 pt-10 px-3 relative">
             <div class="container">
                 <div class="flex logo-slider gap-20 xl:pb-7 transition-all duration-1000 ease-in-out">
-                    <img src="assets/img/svg/nog.svg" alt="nog svg" data-aos="zoom-in-up" data-aos-duration="1200"
-                        class="mr-20 h-7" width="108px">
-                    <img src="assets/img/svg/air.svg" alt="air svg" data-aos="zoom-in-up" data-aos-duration="1200"
-                        class="mr-20 max-w-[118px] h-9">
-                    <img src="assets/img/svg/pro.svg" alt="pro svg" data-aos="zoom-in-up" data-aos-duration="1200"
-                        class="mr-20 w-[149px] h-[27px]">
-                    <img src="assets/img/svg/ari.svg" alt="ari svg" data-aos="zoom-in-up" data-aos-duration="1200"
-                        class="mr-20 w-[59px] h-[32px]">
-                    <img src="assets/img/svg/design.svg" alt="design svg" data-aos="zoom-in-up" data-aos-duration="1200"
-                        class="mr-20 max-w-[106px] h-7">
-                    <img src="assets/img/svg/brrok.svg" alt="brook svg" data-aos="zoom-in-up" data-aos-duration="1200"
-                        class="mr-20 max-w-[120px] h-4">
-                    <img src="assets/img/svg/okuma.svg" alt="okuma svg" data-aos="zoom-in-up" data-aos-duration="1200"
-                        class="mr-20 max-w-[124px] h-7">
-                    <img src="assets/img/svg/island.svg" alt="island svg" data-aos="zoom-in-up" data-aos-duration="1200"
-                        class="mr-20 w-[36px] h-[41px]">
-                    <img src="assets/img/svg/ari.svg" alt="ari svg" data-aos="zoom-in-up" data-aos-duration="1200"
-                        class="mr-20 w-[52px] h-[32px]">
-                    <img src="assets/img/svg/design.svg" alt="design svg" data-aos="zoom-in-up" data-aos-duration="1200"
-                        class="mr-20 max-w-[106px] h-7">
-                    <img src="assets/img/svg/brrok.svg" alt="brook svg" data-aos="zoom-in-up" data-aos-duration="1200"
-                        class="mr-20 max-w-[120px] h-4">
+                    <img src="assets/img/svg/nog.svg" alt="nog svg" data-aos="zoom-in-up" data-aos-duration="1200" class="mx-auto lg:mr-20 md:mr-16 sm:mr-12 mr-10">
+                    <img src="assets/img/svg/air.svg" alt="air svg" data-aos="zoom-in-up" data-aos-duration="1200" class="mx-auto lg:mr-20 md:mr-16 sm:mr-12 mr-10">
+                    <img src="assets/img/svg/pro.svg" alt="pro svg" data-aos="zoom-in-up" data-aos-duration="1200" class="mx-auto lg:mr-20 md:mr-16 sm:mr-12 mr-10">
+                    <img src="assets/img/svg/ari.svg" alt="ari svg" data-aos="zoom-in-up" data-aos-duration="1200" class="mx-auto h-11 lg:mr-20 md:mr-16 sm:mr-12 mr-10">
+                    <img src="assets/img/svg/design.svg" alt="design svg" data-aos="zoom-in-up" data-aos-duration="1200" class="mx-auto lg:mr-20 md:mr-16 sm:mr-12 mr-10">
+                    <img src="assets/img/svg/brrok.svg" alt="brook svg" data-aos="zoom-in-up" data-aos-duration="1200" class="mx-auto lg:mr-20 md:mr-16 sm:mr-12 mr-10">
+                    <img src="assets/img/svg/okuma.svg" alt="okuma svg" data-aos="zoom-in-up" data-aos-duration="1200" class="mx-auto lg:mr-20 md:mr-16 sm:mr-12 mr-10">
+                    <img src="assets/img/svg/island.svg" alt="island svg" data-aos="zoom-in-up" data-aos-duration="1200" class="mx-auto lg:mr-20 md:mr-16 sm:mr-12 mr-10 h-11">
+                    <img src="assets/img/svg/ari.svg" alt="ari svg" data-aos="zoom-in-up" data-aos-duration="1200" class="mx-auto h-11 lg:mr-20 md:mr-16 sm:mr-12 mr-10">
+                    <img src="assets/img/svg/design.svg" alt="design svg" data-aos="zoom-in-up" data-aos-duration="1200" class="mx-auto lg:mr-20 md:mr-16 sm:mr-12 mr-10">
+                    <img src="assets/img/svg/brrok.svg" alt="brook svg" data-aos="zoom-in-up" data-aos-duration="1200" class="mx-auto lg:mr-20 md:mr-16 sm:mr-12 mr-10" >
                 </div>
                 <div class="2xl:block hidden gap-3 mx-3">
                     <button data-aos="zoom-in-up" data-aos-duration="1200"
